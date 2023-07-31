@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: site-docker-service
+spec:
+  selector:
+    app: site-docker
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3000
+  type: LoadBalancer

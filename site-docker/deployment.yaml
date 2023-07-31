@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: site-docker-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: site-docker
+  template:
+    metadata:
+      labels:
+        app: site-docker
+    spec:
+      containers:
+        - name: site-docker
+          image: cintianunes/site-docker:latest
+          ports:
+            - containerPort: 3000

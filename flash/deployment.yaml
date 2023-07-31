@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: minha-aplicacao-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: minha-aplicacao
+  template:
+    metadata:
+      labels:
+        app: minha-aplicacao
+    spec:
+      containers:
+        - name: minha-aplicacao
+          image: cintianunes/minha-aplicacao:latest
+          ports:
+            - containerPort: 5000
