@@ -4,7 +4,7 @@ Guia para subir uma aplicação do Docker para um cluster kubernetes.
 ## Clonando o projeto
 Faça o pull dos arquivos do projeto com: 
 ```
-git clone git@github.com:ccintianunes/kubernetes-deploy.git
+git clone https://github.com/ccintianunes/kubernetes-deploy.git
 ```
 ## Criando a imagem Docker
 Agora, estamos prontos para criar a imagem Docker a partir do Dockerfile. No terminal, dentro do diretório do projeto, execute o seguinte comando:
@@ -18,7 +18,7 @@ Certifique-se de estar no diretório que contém os arquivos app.py, Dockerfile 
 ```
 docker run -d -p 8080:5000 -ti minha-aplicacao:latest
 ```
-O parâmetro -p 8080:3000 mapeia a porta 8080 do host para a porta 3000 do container. Agora, o servidor estará acessível em http://localhost:8080.
+O parâmetro -p 8080:5000 mapeia a porta 8080 do host para a porta 5000 do container. Agora, o servidor estará acessível em http://localhost:8080.
 
 ## Subindo a imagem pro DockerHub
 1. conecte-se com seu dockerhub pelo seu usuário e senha.
